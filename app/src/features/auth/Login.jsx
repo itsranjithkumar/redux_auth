@@ -6,16 +6,16 @@ import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 
 const Login = () => {
-
-    const useRef = useRef()
+    const userRef = useRef()
     const errRef = useRef()
     const [user, setUser] = useState('')
-    const [pwd, setpwd] = useState('')
+    const [pwd, setPwd] = useState('')
     const [errMsg, setErrMsg] = useState('')
     const navigate = useNavigate()
 
     const [login, { isLoading }] = useLoginMutation()
     const dispatch = useDispatch()
+
 
     useEffect(()=>{
       useRef.current.focus()
